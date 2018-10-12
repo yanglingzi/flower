@@ -1,0 +1,97 @@
+@charset "UTF-8";
+body, div, p, ul, ol, li, dl, dt, dd, form, table, tr, td, th, caption, hr, h1, h2, h3, h4, h5, h6, img, input {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: "微软雅黑",Arial;
+  overflow: hidden; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+b {
+  font-weight: 100;
+  color: #f16400; }
+
+.smallbox {
+  padding: 0 74px; }
+
+/*body的class名*/
+.posit {
+  position: relative; }
+
+/*右边固定的个人信息*/
+#infor {
+  position: fixed;
+  width: 33px;
+  height: 100%;
+  background: #595656;
+  right: 0px;
+  top: 0px; }
+
+/*顶部的大图*/
+header .header {
+  display: block;
+  width: 100%;
+  height: 80px;
+  background: url(../img/headerTop.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 80px; }
+
+/*顶部的导航*/
+.headermenu{
+  width: 100%;
+  height: 34px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #e6e6e6;
+  color: #747474;
+  font-size: 12px;
+  line-height: 34px; }
+
+.headermenu ul {
+  display: flex;
+  justify-content: space-between; }
+
+.headermenu a {
+  color: #747474;
+  display: inline-block;
+  padding: 0 10px;
+}
+.headermenu a:hover{
+    color:#ff6a00;
+}
+.headermenu a i {
+  color: #ffb986;
+  font-size: 16px; }
+
+.headermenu .icon-gouwuche {
+  color: #f16400; }
+.sanjiao {
+  border: 6px solid transparent;
+  border-top-color: #d8d8d8;
+}
+.headermenu .kehu,.gouwu{
+    padding:0 15px 0 10px;
+    position: relative;
+    padding-right: 20px;
+}
+.kehu .sanjiao{
+    position: absolute;
+    top: 15px;
+    left: 63px
+}
+
+.gouwu .sanjiao{
+    position: absolute;
+    top: 16px;
+    left: 82px
+}
+
