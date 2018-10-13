@@ -264,8 +264,6 @@ header .header {
         position: absolute;
         right: 73px;
         top:10px;
-//      width: 210px;
-//      height: 422px;
         a{
             position: relative;
             display: block;
@@ -305,14 +303,25 @@ header .header {
      }
   }
 }
+//默认有边框 鼠标放上换边框颜色
+
+.borderdom{
+     border:1px solid #e6e7eb;
+     &:hover{
+         border:1px solid #cccccc;
+     }
+}
+
 //限时推荐
 #xianshi{
     height: 200px;
     width: 100%;
+    @extend .smallbox;
     .title{
         width: 232px;
         height: 200px;
         background: #aacc03;
+        float:left;
         img{
             display: block;
             padding-top:40px;
@@ -324,6 +333,219 @@ header .header {
             text-align: center;
         }
     }
-    
+    .cen{
+        float:left;
+        img{
+            float:left;
+            width: 236px;
+            height:196px;
+            @extend .borderdom;         
+        }
+    }
+  .xiantime{
+        width: 249px;
+        height: 200px;
+        margin-left:1px;
+        float: left;
+        overflow: hidden;
+        }
+}
+//当鼠标放到a上 出现下划线  字体颜色变成#ff6a00色
+.aup{
+    color:#70676c;
+    &:hover{
+        text-decoration: underline;
+         color:#ff6a00;
+    }
+}
+//爱情鲜花 love
+#centerinfo{
+    @extend .smallbox;
+    //标题639+78
+    .module{
+        margin-top: 24px;
+        height: 717px;
+        .tit{
+            display: flex;
+            justify-content: space-between;
+            line-height: 54px;
+            color:#70676c;
+            font-size: 12px;
+            .Left{
+                display: flex;
+                b{
+                    font-size: 20px;
+                }
+                p{
+                    margin-left: 20px;
+                    font-size: 12px;
+                }
+            }
+        }
+    //  内容
+        .cenimg{
+            .photo{
+                width: 243px;
+                height: 639px;
+                background: #ffbebe;
+                float:left;
+                
+                .girla{
+                    display: block;
+                    width: 190px;
+                    height: 48px;
+                    border:2px solid #fff;
+                    line-height: 48px;
+                    text-align: center;
+                    color:#fffcff;
+                    margin:70px auto 0;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .family{
+                background-color:#c2acd2;
+            }
+            .immortal{
+                background-color: #d6d9ec;
+            }
+            .gift{
+                width: 241px;
+                height: 637px;
+                background: #fff;
+                border:1px solid #dcdcdc;
+                position: relative;
+                img{
+                    width: 240px;
+                    height: 318px;
+                   
+                }
+                .gifta{
+                    display: inline-block;
+                    width: 225px;
+                    height: 64px;
+                    line-height: 64px;
+                    text-align: center;
+                    color:#fff;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    background-color: #ffcd8d;
+                    opacity: .8;
+                    position: absolute;
+                    position: absolute;
+                    left: 8px;
+                    bottom: 328px;
+                    z-index: 1;
+                }
+                li{
+                    font-size: 12px;
+                    padding-bottom: 13px;
+                    padding:13px 13px 0;
+                    h4{
+                        color:#ff7600;
+                        line-height: 42px;
+                    }
+                    a{
+                        padding:0 7px 12px 0;
+                        color:#6e6e6e;
+                        @extend .aup;
+                        line-height: 24px;
+                    }
+                    p{
+                        margin-top:20px;
+                        width: 100%;
+                        height: 1px;
+                        background: #d9d9d9;
+                    }
+                }
+            }
+            .hua{
+                width:957px;
+                height: 639px;
+                float:left;
+                a{
+                    display: inline-block;
+                    width: 237px;
+                    height: 308px;
+                    @extend .borderdom;
+                    padding-top: 10px;
+                    color:#70676c;
+                    font-size:12px;
+                    text-align:center;
+                    float:left;
+                    &:hover{
+                        color:#ff6a00;
+                    }
+                    img{
+                        width: 220px;
+                        height: 240px;
+                        margin-bottom: 20px;
+                    }
+                   p{
+                       margin-bottom: 8px;
+                   }
+                }
+                
+            }
+        }
+    }
 }
 
+//下边的评论
+#panel{
+    @extend .smallbox;
+//  width: 100%;
+//  height:292px;
+    display: flex;
+    justify-content: space-between;
+    //标题
+    .panelTitle{
+//      width: 100%;
+        height: 32px;
+        background: #898989;
+        display: flex;
+        justify-content: space-between;
+        padding:0 10px 0 14px;
+        align-items: center;
+        h4{
+            color:#fff;
+            font-size: 12px;
+        }
+    }
+    //内容
+    .con{
+//      width: 100%;
+//      height: 260px;
+        padding:15px 10px 0 7px;
+        background: #f2f2f2;
+        li{
+            line-height: 35px;
+           img{
+                margin-right: 8px;
+            }
+            a{
+                color:#6f6f6f;
+                font-size: 12px;
+                &:hover{
+                    color:#ff6a00;
+                }
+            }
+                 @extend .aup;
+            }
+    }
+    //感动瞬间
+    .gandong{
+        width: 240px;
+        height: 292px;
+    }
+    //最新评价
+    .comments{
+        
+    }
+    //热门资讯
+    .news{
+        
+    }
+}
