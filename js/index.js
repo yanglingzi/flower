@@ -1,5 +1,106 @@
 
 $(function(){
+//	下拉框效果
+//	关注微信
+	$(".guanzhu").mouseenter(function(){
+		$(".guanzhu").css({
+			background:"#fff",
+			"z-index":3,
+			border:"1px solid #d9d9d9",
+			"box-sizing":"border-box",
+			"border-bottom":"none"
+		});
+		$(".guanzhu .weixin").css({
+			display:"block"
+		});
+	});
+	$(".guanzhu").mouseleave(function(){
+		$(".guanzhu").css({
+			background:"#f2f2f2",
+			border:"none"
+		});
+		$(".guanzhu .weixin").css({
+			display:"none"
+		});
+	});
+//	下载APP
+	$(".xiazai").mouseenter(function(){
+		$(".xiazai").css({
+			background:"#fff",
+			"z-index":3,
+			border:"1px solid #d9d9d9",
+			"box-sizing":"border-box",
+			"border-bottom":"none"
+		});
+		$(".xiazai .app").css({
+			display:"block"
+		});
+	});
+	$(".xiazai").mouseleave(function(){
+		$(".xiazai").css({
+			background:"#f2f2f2",
+			border:"none"
+		});
+		$(".xiazai .app").css({
+			display:"none"
+		});
+	});
+//	客户服务
+	$(".kehu").mouseenter(function(){
+		$(".kehu").css({
+			background:"#fff",
+			"z-index":3,
+			border:"1px solid #d9d9d9",
+			"box-sizing":"border-box",
+			"border-bottom":"none"
+		});
+		$(".kehu .sanjiao").css({
+			"border-top-color":"#ff6a00"
+		});
+		$(".fw").css({
+			display:"block"
+		});
+	});
+	$(".kehu").mouseleave(function(){
+		$(".kehu").css({
+			background:"#f2f2f2",
+			border:"none"
+		});
+		$(".kehu .sanjiao").css({
+			"border-top-color":"#cfd5d3"
+		});
+		$(".fw").css({
+			display:"none"
+		});
+	});
+//	购物车
+	$(".gouwu").mouseenter(function(){
+		$(".gouwu").css({
+			background:"#fff",
+			"z-index":3,
+			border:"1px solid #d9d9d9",
+			"box-sizing":"border-box",
+			"border-bottom":"none"
+		});
+		$(".gouwu .sanjiao").css({
+			"border-top-color":"#ff6a00"
+		});
+		$(".gouwuDiv").css({
+			display:"block"
+		});
+	});
+	$(".gouwu").mouseleave(function(){
+		$(".gouwu").css({
+			background:"#f2f2f2",
+			border:"none"
+		});
+		$(".gouwu .sanjiao").css({
+			"border-top-color":"#cfd5d3"
+		});
+		$(".gouwuDiv").css({
+			display:"none"
+		});
+	});
 	//搜索框效果
 	$("#logo .search input").blur(function(){
 		$curval=$("#logo .search input").val();
