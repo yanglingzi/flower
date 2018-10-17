@@ -146,4 +146,48 @@ $(function(){
     		'margin':'0px'
     	},'normal')
     });
+    
+    //永生花更多类别
+    $(".yshua").mouseenter(function(){
+		$(".yshua").css({
+			"z-index":5,
+		});
+		$(".ysflower").css({
+			display:"block"
+		});
+	});
+	$(".yshua").mouseleave(function(){
+		$(".yshua").css({
+			border:"none"
+		});
+		$(".ysflower").css({
+			display:"none"
+		});
+	});
+	  //礼品/公仔类别
+    $(".lipin").mouseenter(function(){
+		$(".lipin").css({
+			"z-index":5,
+		});
+		$(".lipingong").css({
+			display:"block"
+		});
+	});
+	$(".lipin").mouseleave(function(){
+		$(".lipin").css({
+			border:"none"
+		});
+		$(".lipingong").css({
+			display:"none"
+		});
+	});
+	
+//	右侧边栏固定得
+//	$("#infor a").mouseenter(function(){
+//		$(this).each(function{
+//			$(this "div").css({
+//				display:"block"
+//			});
+//		});
+//	});
   });

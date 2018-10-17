@@ -60,7 +60,7 @@ Slider.prototype.createUI= function(){
 		right: "598px",
     	bottom: "20px",
 		"list-style":"none",
-		"z-index":2
+		"z-index":1
 	});
 	this.$box.append($ul);
 	
