@@ -299,6 +299,8 @@ header .header {
                 border:1px solid #fd6a02;
                 border-right: none;
                 outline: none;
+                text-indent: 5px;
+                vertical-align: middle;
             }
             .sou{
                 display: inline-block;
@@ -309,6 +311,7 @@ header .header {
                 text-align: center;
                 line-height: 34px;
                 margin-left: -5px;
+                vertical-align: middle;
             }
             .info{
                 margin-top:8px;

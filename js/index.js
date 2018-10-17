@@ -1,4 +1,4 @@
-
+//index.html
 $(function(){
 //	下拉框效果
 //	关注微信
@@ -191,3 +191,7 @@ $(function(){
 //		});
 //	});
   });
+//denglu.html
+$(function(){
+	
+});

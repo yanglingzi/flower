@@ -5,7 +5,7 @@
 		<title></title>
 	</head>
 	<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/denglu.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/zhuce.css"/>
 	<body>
 		<!--顶部的导航栏-->
 		<div class="headermenu">
@@ -38,8 +38,8 @@
 			 				</a>
 		 				</li>
 		 				<li class="headerRight">
-			 				<a href="#">你好，请登录</a>
-					 		<a href="#">注册</a>|
+			 				<a href="denglu.html">你好，请登录</a>
+					 		<a href="javascript:;">注册</a>|
 					 		<a href="#">订单查询</a>|
 					 		<a href="#" class="myhuali">我的花礼</a>|
 					 		<a href="#" class="kehu">
@@ -76,13 +76,13 @@
 					<img src="../img/logo.png"/>
 					<i class="xian"></i>
 					<p>
-						欢迎登录
+						欢迎注册
 					</p>
 					
 				</div>
 				<!--搜索框-->
 				<div class="search">
-					<input type="text" value="商品关键词"/>
+					<input type="text" placeholder="商品关键词"/>
 					<a href="#" class="sou">搜索</a>
 				</div>
 				<!--客服-->
@@ -98,7 +98,35 @@
 		<!--banner-->
 		<div id="banner">
 			<div class="login">
-				
+				<div class="lineLogin">
+					<a href="denglu.html" class="loginA">登录</a>
+					<a href="javascript:;" class="zhuceA">注册</a>
+				</div>
+				<form method="post" action="zhuce.php">
+					<p><a href="#" class="teleLogin">使用手机号码注册</a></p>
+					<ul class="loginInput">
+						<p>
+							<img src="../img/zhucefail.jpg"/>
+							<span class="fail"></span>
+						</p>
+						<li>
+							<input type="text" id="username" name="username" value="" placeholder="填写您的E-mail地址" />
+						</li>
+						<li>
+							<input type="password" name="" id="userpass" value="" placeholder="密码" />
+						</li>
+						<li>
+							<input type="password" name="" id="userpass" value="" placeholder="再次输入密码" />
+						</li>
+						<li class="yzm">
+							<input type="text" name="" id="yzm" value="" placeholder="验证码" />
+							<a>看不清，换一张</a>
+							
+						</li>
+					</ul>
+					<input type="submit" name="btn" id="btn" value="立即注册" />
+					
+				</form>
 			</div>
 		</div>
 		<!--servermenu-->
@@ -211,3 +239,29 @@
 </html>
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="../js/index.js" ></script>
+<script type="text/javascript">
+$(function(){
+	$("#btn").click(function(){
+		let xhr=new XMLHttpRequest();
+		xhr.open("post","../php/zhuce.php",true);
+		xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					let squ=xhr.responseText;
+					if(squ==0){
+						$(".fail").html("注册失败,用户名已存在");
+					}else if(squ==1){
+						$(".fail").html("注册成功,请登录");
+						location.href="denglu.html";
+					}else if(squ==2){
+						$(".fail").html("服务器出错,请重新注册");
+					}
+					
+					
+				}
+			}
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			let stt="username="+$("#username").val()+"&userpass="+$("#userpass").val();
+			xhr.send(stt);
+	});
+});
+</script>

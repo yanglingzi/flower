@@ -38,8 +38,8 @@
 			 				</a>
 		 				</li>
 		 				<li class="headerRight">
-			 				<a href="#">你好，请登录</a>
-					 		<a href="#">注册</a>|
+			 				<a href="javascript:;">你好，请登录</a>
+					 		<a href="zhuce.html">注册</a>|
 					 		<a href="#">订单查询</a>|
 					 		<a href="#" class="myhuali">我的花礼</a>|
 					 		<a href="#" class="kehu">
@@ -82,7 +82,7 @@
 				</div>
 				<!--搜索框-->
 				<div class="search">
-					<input type="text" value="商品关键词"/>
+					<input type="text" placeholder="商品关键词"/>
 					<a href="#" class="sou">搜索</a>
 				</div>
 				<!--客服-->
@@ -98,21 +98,28 @@
 		<!--banner-->
 		<div id="banner">
 			<div class="login">
-				<a href="javascript:;" class="loginA">登录</a>
-				<a href="zhuce.html" class="zhuceA">注册</a>
-				<p></p>
+				<div class="lineLogin">
+					<a href="javascript:;" class="loginA">登录</a>
+					<a href="zhuce.html" class="zhuceA">注册</a>
+				</div>
 				<from>
 					<p><a href="#" class="teleLogin">使用手机验证码登录</a></p>
-					<img src="../img/dengluuser.jpg"/>
-					<input type="text" name="" id="username" value="" />
-					<img src="../img/denglupass.jpg"/>
-					<input type="password" name="" id="userpass" value="" />
-					<a href="#" class="forget">忘记密码？</a>
-					<input type="submit" name="btn" id="btn" value="登录" />
-					<ul>
+					<ul class="loginInput">
 						<li>
-							<a href="#">微信</a>|
-							<a href="#">QQ</a>|
+							<img src="../img/dengluuser.jpg"/>
+							<input type="text" id="username" placeholder="E-mail地址/手机号" />
+						</li>
+						<li>
+							<img src="../img/denglupass.jpg"/>
+							<input type="password" name="" id="userpass" placeholder="用户密码" />
+						</li>
+					</ul>
+					<a href="#" class="forget">忘记密码？</a>
+					<input type="submit" name="btn" id="btn" value="登   录" />
+					<ul class="QQ">
+						<li>
+							<a href="#">微信</a><span>|</span>
+							<a href="#">QQ</a><span>|</span>
 							<a href="#">支付宝</a>
 						</li>
 					</ul>
