@@ -5,7 +5,7 @@
 		<title></title>
 	</head>
 	<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/denglu.css"/>
+	<link rel="stylesheet" href="../css/shopping.css" />
 	<body>
 		<!--顶部的导航栏-->
 		<div class="headermenu">
@@ -76,15 +76,11 @@
 					<img src="../img/logo.png"/>
 					<i class="xian"></i>
 					<p>
-						欢迎登录
+						中国鲜花礼网<br />
+						<i>始于2005，简称花礼网</i>
 					</p>
-					
 				</div>
-				<!--搜索框-->
-				<div class="search">
-					<input type="text" placeholder="商品关键词"/>
-					<a href="#" class="sou">搜索</a>
-				</div>
+				
 				<!--客服-->
 				<div class="tele">
 					<i class="iconfont icon-dianhua"></i>
@@ -97,33 +93,46 @@
 		
 		<!--banner-->
 		<div id="banner">
-			<div class="login">
-				<div class="lineLogin">
-					<a href="javascript:;" class="loginA">登录</a>
-					<a href="zhuce.html" class="zhuceA">注册</a>
-				</div>
-				<form method="post" action="login.php">
-					<p><a href="#" class="teleLogin">使用手机验证码登录</a></p>
-					<ul class="loginInput">
-						<li>
-							<img src="../img/dengluuser.jpg"/>
-							<input type="text" id="username" placeholder="E-mail地址/手机号" />
-						</li>
-						<li>
-							<img src="../img/denglupass.jpg"/>
-							<input type="password" name="" id="userpass" placeholder="用户密码" />
-						</li>
-					</ul>
-					<a href="#" class="forget">忘记密码？</a>
-					<input type="submit" name="btn" id="btn" value="登   录" />
-					<ul class="QQ">
-						<li>
-							<a href="#">微信</a><span>|</span>
-							<a href="#">QQ</a><span>|</span>
-							<a href="#">支付宝</a>
-						</li>
-					</ul>
-				</form>
+			<div class="default">
+				<img src="../img/shopping.jpg"/>
+				<span>
+					这里什么都没有啊~
+					<a href="../index.html">去逛逛&gt;</a>
+				</span>
+				
+			</div>
+		</div>
+		<!--服务-->
+		<div id="server">
+			<div class="smallbox">
+				<a href="#">
+					<img src="../img/server01.png"/>
+					<h4>
+						鲜花电商龙头
+						<p>销量领先，权威认证龙头企业</p>
+					</h4>
+				</a>
+				<a href="#">
+					<img src="../img/server02.png"/>
+					<h4>
+						13年品牌 真实口碑
+						<p>最近评价 273145条</p>
+					</h4>
+				</a>
+				<a href="#">
+					<img src="../img/server03.png"/>
+					<h4>
+						鲜花实拍秀展示
+						<p>敢展现送前实拍的鲜花网</p>
+					</h4>
+				</a>
+				<a href="#">
+					<img src="../img/server04.png"/>
+					<h4>
+						3小时送花
+						<p>全国连锁，3小时送2000城市</p>
+					</h4>
+				</a>
 			</div>
 		</div>
 		<!--servermenu-->
@@ -227,37 +236,7 @@
 				深圳市百易信息技术有限公司  &nbsp;中国鲜花网领先品牌，鲜花速递专家！
 			</p>
 		</div>
-		<!--咨询客服-->
-		<div id="zixunkefu">
-			<span><img src="../img/xinxi.jpg"/></span>
-			<span>咨询客服</span>
-		</div>
 	</body>
 </html>
 <script type="text/javascript" src="../js/jquery-1.8.3.min.js" ></script>
 <script type="text/javascript" src="../js/index.js" ></script>
-<!--<script type="text/javascript" src="../js/ajax180506.js" ></script>-->
-<script type="text/javascript">
-$(function(){
-	$("#btn").click(function(){
-	let xhr=new XMLHttpRequest();
-	xhr.open("post","../php/login.php",true);
-	xhr.onreadystatechange=function(){
-				if(xhr.readyState==4&&xhr.status==200){
-					let squ=xhr.responseText;
-					if(squ==1){
-						location.href="../index.html";
-					}else{
-						alert("登录失败,请注册");
-						location.href="zhuce.html";
-					}
-				}
-			}
-			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-			let stt="username="+$("#userId").val()+"&userpass="+$("#userName").val();
-			xhr.send(stt);
-	});
-});
-
-</script>
-

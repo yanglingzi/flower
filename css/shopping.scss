@@ -21,7 +21,7 @@ b {
   color: #f16400; }
 
 .smallbox {
-  padding: 0 74px; }
+  padding: 0 178px; }
 
 
 //当鼠标放到a上 出现下划线  字体颜色变成#ff6a00色
@@ -93,7 +93,7 @@ b {
         
         .fw{
             position: absolute;
-            left:296px;
+            left:216px;
             top:32px;
             width: 78px;
             border:1px solid #d9d9d9;
@@ -115,7 +115,7 @@ b {
          }
         .gouwuDiv{
             position: absolute;
-            left:153px;
+            left:83px;
             top:32px;
             width: 318px;
             $height: 124px;
@@ -133,7 +133,6 @@ b {
 .headermenu a {
   color: #747474;
   display: inline-block;
-  padding: 0 10px;
 }
 .headermenu a:hover{
     color:#ff6a00;
@@ -186,34 +185,13 @@ b {
             }
             p{
                 color:#797a7c;
-                font-size: 24px;
-                font-weight: 100;
+                font-size: 14px;
+                float:left;
+                i{
+                  font-size: 12px;
+                }
             }
            
-        }
-        .search{
-//          width: 320px;
-            input{
-                display: inline-block;
-                width: 237px;
-                height: 32px;
-                border:1px solid #fd6a02;
-                border-right: none;
-                outline: none;
-                text-indent: 5px;
-                vertical-align: middle;
-            }
-            .sou{
-                display: inline-block;
-                width: 82px;
-                height: 34px;
-                background: #fd6a02;
-                color:#fff;
-                text-align: center;
-                line-height: 34px;
-                margin-left: -5px;
-                vertical-align: middle;
-            }
         }
         .tele{
             i{
@@ -245,105 +223,62 @@ b {
 
 //banner
 #banner{
-    position: relative;
+    @extend .smallbox;
     display: block;  
     width: 100%;
-    height: 488px;
-    background: url(../img/denglubg.jpg);
-    
-    .login{
-        position: absolute;
-        right: 179px;
-        top:40px;
-        width: 380px;
-        height: 298px;
-        padding: 21px 20px 89px;
-        background: #fff;
-        .lineLogin{
-            height: 43px;
-            width: 100%;
-            background: url(../img/loginbg.jpg) repeat-x;
-            .zhuceA{
-                display: inline-block;
-                padding:0px 34px;
-                line-height: 41px;
-                text-align: center;
-                color:#737373;
-                font-size: 16px;
-             }
-            .loginA{
-                @extend .zhuceA;
-                border-bottom: 2px solid #ff6a00;
-                color:#ff6a00;
-            }
+//  background: pink;
+    .default{
+            position: relative;
+        img{
+            display: block;
+        }
+        span{
             
-        }
-        
-        form{
-            .teleLogin{
-                color:#ff6a00;
-                text-decoration: none;
-                font-size: 12px;
-                margin-left: 230px;
-                line-height: 53px;
-            }
-            .loginInput{
-                margin-left: 38px;
-                li{
-                    margin-bottom: 10px;
-                }
-                 img{
-                    vertical-align: middle;
-                    float: left;
-                }
-                input{
-                    width: 265px;
-                    height: 38px;
-                    text-indent: 5px;
-                    vertical-align: middle;
-                    border:1px solid #d2d2d2;
-                }
-            }
-            .forget{
-                @extend .teleLogin;
-                margin-left: 282px;
-                line-height: 31px;
-            }
-            #btn{
-                width: 304px;
-                height: 46px;
-                line-height: 46px;
+            color:#333333;
+            font-size: 14px;
+            position: absolute;
+            top:60px;
+            left:434px;
+            a{
+                display: block;
+                width: 77px;
+                height: 26px;
+                background: #ff6600;
+                line-height: 26px;
                 text-align: center;
+                border-radius: 6px;
                 color:#fff;
-                font-size: 16px;
-                background: #ff6a00;
-                border:none;
-                border-radius: 5px;
-                margin-left: 38px;
-                cursor: pointer;
-                &:hover{
-                    background: #f56600;
-                }
-            }
-            .QQ{
-                    font-size: 12px;
-                    color:#737373;
-                    margin-left: 38px;
-                a{
-                    font-size: 12px;
-                    color:#737373;
-                    @extend .aup;
-                    line-height: 60px;
-                }
-                span{
-                    margin:0 12px;
-                }
+                font-size: 14px;
+                margin-top: 20px;
             }
         }
-        
     }
+}   
+//服务
+#server{
+    width: 100%;
+    border-top: 2px solid #eeeeee;
+    .smallbox{
+       height: 120px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+         a{
+       display: flex;
+       h4{
+           color:#49494b;
+           font-size: 16px;
+           margin-left:14px;
+           font-weight: 100;
+           p{
+              color:#969696;
+              font-size: 12px;
+           }
+       }
+     }
+  }
 }
-//  <!--不带背景的服务按钮-->
+///  <!--不带背景的服务按钮-->
 #servermenu{
     height: 76px;
     @extend .smallbox;
@@ -359,7 +294,7 @@ b {
                 color:#686868;
                 font-size: 12px;
                 @extend .aup;
-                padding:0 30px;
+                padding:0 15px;
             }
             span{
                 display: inline-block;
@@ -371,7 +306,6 @@ b {
         }
     }       
 }
-
 //备案footer
 #footerBeian{
     display: flex;
@@ -399,30 +333,4 @@ b {
         }
     }
     
-}
-
-//咨询客服
-#zixunkefu{
-    position: fixed;
-    right: 60px;
-    bottom: 1px;
-    width: 126px;
-    height: 39px;
-    background: #ff6600;
-    border:1px solid #e55c00;
-    border-bottom: none;
-    overflow-y: hidden;
-    span:first-child{
-        width: 40px;
-        height: 39px;
-        border-right:1px solid #e55c00;
-        padding:11px;
-    }
-    span:last-child{
-        width: 84px;
-        height:39px;
-        text-align: center;
-        line-height: 39px;
-        color:#fff; 
-    }
 }
